@@ -1,0 +1,139 @@
+footer {
+    background: $color-backgroundFooter;
+    box-sizing: border-box;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.footer-list {
+    display: flex;
+    align-items: baseline;
+}
+
+.address__list {
+    color: $color-white;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    font-style: normal;
+
+    margin-top: 20px;
+}
+
+.address__item:nth-child(2) {
+    padding: 9px 0;
+}
+
+.address__link {
+    font-size: 14px;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover, &:focus {
+        color: $color-hover;
+        @extend %animation;
+    }
+}
+
+.join {
+    margin-left: 70px;
+}
+
+.join__topic {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.social {
+    margin-top: 20px;
+    align-items: center;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.social__link {
+    @extend %displayFlexCenter;
+    color: $color-white;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    &:hover, &:focus {
+        background-color: $color-hover;
+        @extend %animation;
+    }
+}
+
+.social__link:nth-child(n+2) {
+    margin-left: 10px;
+}
+
+.social__icon {
+    fill: currentColor;
+}
+
+.subscribe {
+    margin-left: auto;
+}
+
+.subscribe__topic {
+    color: $color-white;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.subscribe__form {
+    margin-top: 20px;
+    @extend %displayFlexCenter;
+}
+
+.subscribe__input {
+    width: 358px;
+    height: 50px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    padding: 0 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    background-color: $color-backgroundFooter;
+    color: $color-textSecondary;
+}
+
+.subscribe__button {
+    max-width: 200px;
+    height: 50px;
+    margin-left: 12px;
+    padding: 10px 28px;
+
+    background: $color-hover;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-color: transparent;
+    border-radius: 4px;
+
+    color: $color-white;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    cursor: pointer;
+
+    @extend %displayFlexCenter;
+}
+
+.subscribe__icon {
+    fill: $color-white;
+    margin-left: 10px;
+}

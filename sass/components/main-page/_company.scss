@@ -1,0 +1,43 @@
+.company {
+    padding-top: $mainPadding;
+    padding-bottom: $mainPadding;
+}
+
+.company__topic {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: $color-textPrimary;
+}
+
+.company__list {
+    margin-top: 50px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.company__link {
+    width: 170px;
+    height: 92px;
+    border: 1px solid $color-socialIcons;
+    border-radius: 4px;
+    color: $color-socialIcons;
+
+    @extend %displayFlexCenter;
+
+    &:hover, &:focus {
+        border: 1px solid $color-hover;
+        color: $color-hover;
+        @extend %animation;
+    }
+}
+
+
+.company__icon {
+    fill: currentColor;
+}

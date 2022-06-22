@@ -1,0 +1,88 @@
+.portfolio {
+    margin: 50px -15px -30px -15px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio__container {
+    display: none;
+    box-sizing: border-box;
+    margin: 0 15px 30px 15px;
+}
+
+.list-show {
+    display: block;
+}
+
+.projeect {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio__link {
+    display: block;
+
+    &:hover,
+    &:focus {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        @extend %animation;
+    }
+
+    &:hover .projeect__overlay,
+    &:focus .projeect__overlay {
+        transform: translatey(0);
+    }
+}
+
+.projeect__img {
+    width: 370px;
+    height: 294px;
+}
+
+.projeect__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(33, 150, 243, 0.9);
+    transform: translatey(101%);
+    transition-property: transform;
+    @extend %animation;
+}
+
+.projeect__label {
+    color: $color-white;
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    padding: 49px 45px 49px 24px;
+}
+
+.projeect__card {
+    padding: 20px 24px;
+    text-align: left;
+    border-right: 1px solid $color-borderJobs;
+    border-bottom: 1px solid $color-borderJobs;
+    border-left: 1px solid $color-borderJobs;
+}
+
+.projeect__topic {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.06em;
+    color: $color-textPrimary;
+}
+
+.projeect__text {
+    padding-top: 4px;
+    font-size: 16px;
+    line-height: 1.6;
+    letter-spacing: 0.03em;
+    color: $color-textSecondary;
+}
+

@@ -1,0 +1,23 @@
+@import "./utils/vars";
+@import "./utils/mixins";
+@import "./utils/placeholders";
+
+@import "./base/normalize";
+@import "./base/global";    // Global styles
+
+@import "./components/header";
+@import "./components/logo";
+@import "./components/nav";
+@import "./components/contact-header";
+@import "./components/footer";
+
+@import "./components/main-page/hero";
+@import "./components/main-page/features";
+@import "./components/main-page/work";
+@import "./components/main-page/team";
+@import "./components/main-page/company";
+
+@import "./components/modal";
+
+@import "./components/portfolio-page/filter";
+@import "./components/portfolio-page/list";

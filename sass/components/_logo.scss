@@ -1,0 +1,23 @@
+.page-logo {
+    font-family: $fontLogo;
+    font-size: 26px;
+    line-height: 1.2;
+    color: $color-black;
+
+    &:hover, &:focus {
+        color: $color-black;
+    }
+
+    & span {
+        color: $color-hover;
+    }
+}
+
+.address .page-logo {
+    color: $color-white;
+
+    &:hover, &:focus {
+        color: $color-white;
+    }
+}
+

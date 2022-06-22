@@ -1,0 +1,54 @@
+body {
+    font-family: $fontMain;
+    font-size: 14px;
+    letter-spacing: 0.03em;
+    color: $color-black;
+    background-color: $color-white;
+    margin: 0;
+}
+
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.container-center {
+    width: 1200px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.link,
+.link:hover,
+.link:focus {
+    text-decoration: none;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+

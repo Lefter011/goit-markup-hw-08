@@ -1,0 +1,29 @@
+.contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+}
+
+.contact__item:nth-child(1) {
+    padding-right: 50px;
+}
+
+.contact__link {
+    @extend %displayFlexCenter;
+    font-size: 14px;
+    line-height: 1.15;
+    font-weight: 500;
+    color: $color-textSecondary;
+
+    &:hover,
+    &:focus {
+        color: $color-hover;
+        @extend %animation
+    }
+}
+
+.contact__icon {
+    fill: currentColor;
+    margin-right: 10px;
+}

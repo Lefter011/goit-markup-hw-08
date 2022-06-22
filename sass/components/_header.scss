@@ -1,0 +1,7 @@
+header {
+    border-bottom: 1px solid $color-borderHeader;
+}
+
+.nav-header {
+    @extend %displayFlexCenter;
+}
