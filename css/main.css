@@ -752,6 +752,11 @@ footer {
   letter-spacing: 0.03em;
   cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+  .subscribe__button {
+    margin-top: 0;
+  }
+}
 
 .subscribe__icon {
   fill: #fff;

@@ -192,6 +192,10 @@ footer {
     line-height: 1.18;
     letter-spacing: 0.03em;
     cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+        margin-top: 0;
+    }
 }
 
 .subscribe__icon {
