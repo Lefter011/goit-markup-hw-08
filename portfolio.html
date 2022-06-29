@@ -13,6 +13,13 @@
     />
     <link rel="stylesheet" href="./css/main.min.css" />
     <script src="./js/portfolio.js" defer></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/mobile-menu.js" defer></script>
   </head>
   <body>
     <header>
@@ -23,11 +30,13 @@
           >
           <nav>
             <ul class="navigation">
-              <li class="navigation__item">
-                <a class="navigation__link link" href="index.html">Студия</a>
-              </li>
               <li class="current navigation__item">
-                <a class="navigation__link current link" href="portfolio.html"
+                <a class="navigation__link current link" href="index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="navigation__item">
+                <a class="navigation__link link" href="portfolio.html"
                   >Портфолио</a
                 >
               </li>
@@ -54,6 +63,15 @@
               >
             </li>
           </ul>
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="menu__header" width="40" height="40">
+              <use href="./img/symbol-defs.svg#icon-burger"></use>
+            </svg>
+          </button>
         </div>
       </div>
     </header>
@@ -389,5 +407,84 @@
         </div>
       </div>
     </footer>
+    <!-- Mobile Menu -->
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <ul class="mobile-menu">
+        <li class="mobile-menu__item">
+          <a href="./index.html" class="mobile-menu__link link">Студія</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a
+            href="./portfolio.html"
+            class="mobile-menu__link mobile-menu__link--current link"
+            >Портфоліо</a
+          >
+        </li>
+        <li class="mobile-menu__item">
+          <a href="" class="mobile-menu__link link">Контакти</a>
+        </li>
+      </ul>
+
+      <div class="menu__group">
+        <ul class="menu-contact">
+          <li class="menu-contact__item">
+            <a href="tel:+380961111111" class="menu-contact__tel link">
+              +38 096 111 11 11</a
+            >
+          </li>
+          <li class="menu-contact__item" lang="en">
+            <a href="mailto:info@devstudio.com" class="menu-contact__mail link">
+              info@devstudio.com</a
+            >
+          </li>
+        </ul>
+        <ul class="menu-social">
+          <li class="menu-social__item">
+            <a
+              href="https:/www.instagram.com"
+              class="menu-social__link link"
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+              >Instagram</a
+            >
+          </li>
+          <li class="menu-social__item">
+            <a
+              href="https:/www.twitter.com"
+              class="menu-social__link link"
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+              >Twitter</a
+            >
+          </li>
+
+          <li class="menu-social__item">
+            <a
+              href="https:/www.facebook.com"
+              class="menu-social__link link"
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+              >Facebook</a
+            >
+          </li>
+
+          <li class="menu-social__item">
+            <a
+              href="https:/www.linkedin.com"
+              class="menu-social__link link"
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+              >LinkedIn</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <button class="menu-toggle js-close-menu">
+        <svg class="close_header" width="40" height="40">
+          <use href="./img/symbol-defs.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
   </body>
 </html>

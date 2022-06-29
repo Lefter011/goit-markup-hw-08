@@ -9,16 +9,32 @@
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
+    margin-bottom: 30px;
 
     color: $color-textPrimary;
 }
 
 .company__list {
-    margin-top: 50px;
-
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: wrap;
+    margin: -15px;
+    
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+    }
+}
+
+.company__item {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+    
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 3 * 30px) / 3);
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 270px;
+    }
 }
 
 .company__link {

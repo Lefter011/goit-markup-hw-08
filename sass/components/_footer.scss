@@ -3,11 +3,24 @@ footer {
     box-sizing: border-box;
     padding-top: 60px;
     padding-bottom: 60px;
+    @media screen and (min-width: 1200px) {
+        margin-left: 0px;
+    }
 }
 
 .footer-list {
-    display: flex;
-    align-items: baseline;
+    text-align: center;
+    
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: space-around;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 
 .address__list {
@@ -20,8 +33,17 @@ footer {
     margin-top: 20px;
 }
 
-.address__item:nth-child(2) {
-    padding: 9px 0;
+.address__item {
+    margin-bottom: 8px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        margin-bottom: 9px;
+    }
+    
 }
 
 .address__link {
@@ -36,7 +58,12 @@ footer {
 }
 
 .join {
-    margin-left: 70px;
+    @media screen and (max-width: 768px) {
+        margin-top: 60px;
+    }
+    @media screen and (min-width: 1200px) {
+        margin-left: 70px;
+    }
 }
 
 .join__topic {
@@ -46,14 +73,17 @@ footer {
     line-height: 1.15;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+        text-align: start;
+    }
 }
 
 .social {
     margin-top: 20px;
-    align-items: center;
-
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: center;
 }
 
 .social__link {
@@ -71,8 +101,12 @@ footer {
     }
 }
 
-.social__link:nth-child(n+2) {
-    margin-left: 10px;
+.social__link {
+    margin-right: 10px;
+    
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .social__icon {
@@ -80,7 +114,14 @@ footer {
 }
 
 .subscribe {
-    margin-left: auto;
+    margin-top: 60px;
+    
+    @media screen and (min-width: 1200px) {
+        display: inline-flex;
+        flex-direction: column;
+        margin-left: 93px;
+        margin-top: 0;
+    }
 }
 
 .subscribe__topic {
@@ -90,33 +131,55 @@ footer {
     line-height: 1.15;
     letter-spacing: 0.03em;
     text-transform: uppercase;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+        text-align: start;
+    }
 }
 
 .subscribe__form {
     margin-top: 20px;
-    @extend %displayFlexCenter;
+    
+    @media screen and (min-width: 1200px) {
+        align-items: flex-start;
+        display: flex;
+    }
 }
 
 .subscribe__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
+    padding: 15px 16px;
 
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
-    padding: 0 20px;
     font-size: 16px;
     line-height: 1.6;
     letter-spacing: 0.03em;
     background-color: $color-backgroundFooter;
     color: $color-textSecondary;
+
+    @media screen and (min-width: 768px) {
+        width: 450px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 358px;
+        margin-right: 10px;
+    }
 }
 
 .subscribe__button {
-    max-width: 200px;
-    height: 50px;
-    margin-left: 12px;
+    margin-top: 20px;
     padding: 10px 28px;
+    display: flex;
+    min-width: 200px;
+    align-items: center;
+
+    margin-left: auto;
+    margin-right: auto;
 
     background: $color-hover;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -129,8 +192,6 @@ footer {
     line-height: 1.18;
     letter-spacing: 0.03em;
     cursor: pointer;
-
-    @extend %displayFlexCenter;
 }
 
 .subscribe__icon {

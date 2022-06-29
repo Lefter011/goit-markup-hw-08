@@ -9,24 +9,45 @@
 
     transition-property: opacity;
     @extend %animation;
+
+    &.is-hidden {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 .modal {
-    @extend %displayFlexCenter;
+
     flex-direction: column;
     padding: 40px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    height: 609px;
     background-color: $color-white;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     z-index: 10;
+
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.4);
+        opacity: 0;
+    }
+    
+    .backdrop & {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        width: 528px;
+        height: 581px;
+    }
 }
 
 .close__btn {

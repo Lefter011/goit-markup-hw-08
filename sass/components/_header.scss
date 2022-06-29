@@ -3,5 +3,13 @@ header {
 }
 
 .nav-header {
-    @extend %displayFlexCenter;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+    
+    @media screen and (min-width: 1200px) {
+        justify-content: flex-start;
+        padding-top: 0;
+    }
 }
