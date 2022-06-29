@@ -693,9 +693,9 @@ footer {
 }
 @media screen and (min-width: 1200px) {
   .subscribe__form {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
