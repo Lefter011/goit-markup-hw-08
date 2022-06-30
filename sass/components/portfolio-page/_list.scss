@@ -85,8 +85,8 @@
     letter-spacing: 0.03em;
     padding: 49px 45px 49px 24px;
 
-    @media screen and (max-width) {
-        padding: 70px 24px;
+    @media screen and (max-width: 768px) {
+        padding: 77px 24px;
     }
 }
 

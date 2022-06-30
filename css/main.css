@@ -1725,9 +1725,9 @@ footer {
   letter-spacing: 0.03em;
   padding: 49px 45px 49px 24px;
 }
-@media screen and (max-width) {
+@media screen and (max-width: 768px) {
   .project__label {
-    padding: 70px 24px;
+    padding: 77px 24px;
   }
 }
 
