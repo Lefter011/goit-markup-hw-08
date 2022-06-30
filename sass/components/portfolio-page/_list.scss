@@ -1,21 +1,39 @@
 .portfolio {
-    margin: 50px -15px -30px -15px;
+    margin: 50px -15px -15px -15px;
     overflow: hidden;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio__container {
     display: none;
     box-sizing: border-box;
-    margin: 0 15px 30px 15px;
+    margin-bottom: 30px;
+        
+    &:last-child {
+        margin-bottom: 0;
+    }
+        
+    @media screen and (min-width: 768px) {
+        width: calc((100% - 2 * 30px) / 2);
+        margin: 15px;
+        
+        &:last-child {
+            margin-bottom: 15px;
+        }
+    }
+        
+    @media screen and (min-width: 1200px) {
+        width: calc((100% - 3 * 30px) / 3);
+    }
 }
 
 .list-show {
     display: block;
 }
 
-.projeect {
+.project {
     position: relative;
     overflow: hidden;
 }
@@ -29,18 +47,24 @@
         @extend %animation;
     }
 
-    &:hover .projeect__overlay,
-    &:focus .projeect__overlay {
+    &:hover .project__overlay,
+    &:focus .project__overlay {
         transform: translatey(0);
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }
 
-.projeect__img {
-    width: 370px;
-    height: 294px;
+.project__img {
+    width: 100%;
+    height: 100%;
 }
 
-.projeect__overlay {
+.project__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -52,7 +76,7 @@
     @extend %animation;
 }
 
-.projeect__label {
+.project__label {
     color: $color-white;
     margin: 0;
     text-align: left;
@@ -62,15 +86,17 @@
     padding: 49px 45px 49px 24px;
 }
 
-.projeect__card {
+.project__card {
     padding: 20px 24px;
     text-align: left;
     border-right: 1px solid $color-borderJobs;
     border-bottom: 1px solid $color-borderJobs;
     border-left: 1px solid $color-borderJobs;
+
+    flex-grow: 1;
 }
 
-.projeect__topic {
+.project__topic {
     font-weight: 700;
     font-size: 18px;
     line-height: 1.7;
@@ -78,7 +104,7 @@
     color: $color-textPrimary;
 }
 
-.projeect__text {
+.project__text {
     padding-top: 4px;
     font-size: 16px;
     line-height: 1.6;

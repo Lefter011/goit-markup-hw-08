@@ -7,6 +7,17 @@
 .filter__item {
     display: flex;
     flex-wrap: wrap;
+        align-items: center;
+            justify-content: flex-start;
+
+        @media screen and (min-width: 768px) {
+                justify-content: center;
+                margin-bottom: 36px;
+            }
+        
+            @media screen and (min-width: 1200px) {
+                margin-bottom: 50px;
+            }
 }
 
 .filter__btn {
@@ -19,9 +30,16 @@
     line-height: 1.62;
     cursor: pointer;
 
-    &:nth-child(n+2) {
-        margin-left: 8px;
+    margin-right: 8px;
+    &:last-child {
+        margin-right: 0;
     }
+    
+        margin-bottom: 15px;
+    
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
 
     &:hover, &:focus, .filter__btn-active{
         background: $color-hover;
