@@ -1725,6 +1725,11 @@ footer {
   letter-spacing: 0.03em;
   padding: 49px 45px 49px 24px;
 }
+@media screen and (max-width) {
+  .project__label {
+    padding: 70px 24px;
+  }
+}
 
 .project__card {
   padding: 20px 24px;
