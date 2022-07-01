@@ -378,7 +378,11 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 16px;
-  padding-bottom: 16px;
+}
+@media screen and (max-width: 768px) {
+  .nav-header {
+    padding-bottom: 16px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .nav-header {
