@@ -54,6 +54,10 @@
     letter-spacing: 0.03em;
     text-transform: uppercase;
     text-align: left;
+
+    @media screen and (max-width: 768px) {
+        text-align: center;
+    }
 }
 
 .features__text {

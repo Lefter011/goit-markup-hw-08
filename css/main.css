@@ -378,6 +378,7 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media screen and (min-width: 1200px) {
   .nav-header {
@@ -1083,6 +1084,11 @@ footer {
   text-transform: uppercase;
   text-align: left;
 }
+@media screen and (max-width: 768px) {
+  .features__topic {
+    text-align: center;
+  }
+}
 
 .features__text {
   color: #757575;
@@ -1560,7 +1566,11 @@ footer {
 .filter {
   padding-top: 94px;
   padding-bottom: 94px;
-  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .filter {
+    text-align: center;
+  }
 }
 
 .filter__item {
